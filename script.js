@@ -1,12 +1,15 @@
-var css = document.querySelector('h3');
-var color1 = document.querySelector('.color1');
-var color2 = document.querySelector('.color2');
-var body = document.querySelector('body');
+// DOM selectors
+const css = document.querySelector('h3');
+const color1 = document.querySelector('.color1');
+const color2 = document.querySelector('.color2');
+const body = document.querySelector('body');
 
-function setGradient() {
+// set gradient function
+const setGradient = () => {
 	body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value}`;
 	css.textContent = body.style.background + ';';
-}
-color1.addEventListener('input', setGradient);
+};
 
+//eventlistener for color inputs
+color1.addEventListener('input', setGradient);
 color2.addEventListener('input', setGradient);
